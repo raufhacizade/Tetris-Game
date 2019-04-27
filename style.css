@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background: linear-gradient(rgb(47, 150, 150),rgb(48, 62, 200));
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#game-board{
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  display:block;
+}
+
+.score-table{
+  display:block;
+}
+.score-table h1{
+  margin-top: 10%;
+  font-size: 45px;
+  text-align: center;
+  color: #fff;
+  display: block;
+
+}
