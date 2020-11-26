@@ -7,13 +7,38 @@
   </head>
   <body>
 
-    <div class="main">
+    <a class="mainBTN" id="startBTN" onclick="return start()">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="zoom">
+        <h2>let's play</h2>
+        <img src="Tetris_logo.png" style="width:160px;height:100px;" alt="TETRIS">
+      </div>
+    </a>
 
-    <canvas id="game-board" width="300" height="510" ></canvas>
-
-    <div class="score-table">
-      <h1 ></h1>
+    <div  class="mainBTN" id="re-startBTN" style="display: none;">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    
+      <h2 class="game-over">game over</h2>
+      <a onclick="return reStart()">   
+        <div class="zoom">
+          <h2 class="play-again">play again</h2>
+        </div>
+      </a>
     </div>
+
+    <div class="main" id="main" style="display: none;">
+
+      <canvas id="game-board" width="300" height="510" ></canvas>
+
+      <div class="score-table">
+        <h1></h1>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>

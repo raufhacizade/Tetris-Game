@@ -154,15 +154,18 @@ const PIECES=[
         [Z,"red"]
      ];
 
+function fillBoard(){
+  for (var r = 0; r < row; r++) {
+    board[r]=[];
+    for (var c = 0; c < column; c++) {
+      board[r][c]=VACANT;
+    }
+  }//end of board
+}
+
 const VACANT="white";
 let   board=[];
-
-for (var r = 0; r < row; r++) {
-  board[r]=[];
-  for (var c = 0; c < column; c++) {
-    board[r][c]=VACANT;
-  }
-}//end of board
+fillBoard();
 
 const drawSquare=(x,y,color)=>{
   ctx.fillStyle=color;
@@ -234,7 +237,6 @@ function Piece(tetromino,color){
          this.y++;
          this.Drawn();
      }else {
-          console.log("next is lock() and create new tetromino");
           this.lock();
           piece=randomPiece();
      }
@@ -288,16 +290,12 @@ function Piece(tetromino,color){
             continue;
          }
          if (this.y+r < 0) {
+            
+            document.getElementById("re-startBTN").style.display = "block";
             gameOver=true;
-            alert("Game Over");
-            location.reload();
             break;
          }
          board[this.y+r][this.x+c]="grey";
-       }
-       if (this.y+r < 0) {
-          gameOver=true;
-          break;
        }
      }
 
@@ -315,8 +313,9 @@ function Piece(tetromino,color){
            for (var c= 0; c<column; c++) {
                board[0][c]=VACANT;
            }
+           animateValue(score, score+10, 550)
            score+=10;
-           scoreText.innerHTML="Score is "+score;
+          //  scoreText.innerHTML="Score is <b>"+score+"</b>";
        }
      }
       drawBoard();
@@ -325,13 +324,13 @@ function Piece(tetromino,color){
 }//End OF Piece
 
 function CONTROL(event){
-  if (event.keyCode==37) {
+  if (event.keyCode==37 || event.keyCode== 65 ) {
     piece.moveLeft();
-  }else if (event.keyCode==38) {
+  }else if (event.keyCode==38 || event.keyCode== 87) {
     piece.rotate();
-  }else if (event.keyCode==39) {
+  }else if (event.keyCode==39 || event.keyCode== 68) {
     piece.moveRight();
-  }else if (event.keyCode==40) {
+  }else if (event.keyCode==40 || event.keyCode== 83) {
     piece.moveDown();
   }
 }//end Of CONTROL
@@ -354,10 +353,47 @@ function drop(){
   }
 }//end of drop
 
-drawBoard();
 
-//let piece=randomPiece();
-drop();
+drawBoard();
 piece=randomPiece();
-scoreText.innerHTML="Score is 0";
-document.addEventListener("keydown",CONTROL);
+function start(){
+  document.getElementById("startBTN").style.display = "none";
+  document.getElementById("main").style.display = "block";
+
+  drop();
+  scoreText.innerHTML="Score is 0";
+  document.addEventListener("keydown",CONTROL);
+  return false;
+}
+
+function reStart(){
+  animateValue(score, 0, 250);
+  score = 0;
+  gameOver=false;
+  dropStart=Date.now();
+  board=[];
+  fillBoard();
+  drawBoard();
+  drop();
+  // scoreText.innerHTML="Score is 0";
+  document.getElementById("re-startBTN").style.display = "none";
+  document.addEventListener("keydown",CONTROL);
+  return false;
+}
+
+function animateValue(start, end, duration) {
+  console.log("here");
+  if (start === end) return;
+  var range = end - start;
+  var current = start;
+  var increment = end > start? 1 : -1;
+  var stepTime = Math.abs(Math.floor(duration / range));
+  // var obj = document.getElementById(id);
+  var timer = setInterval(function() {
+      current += increment;
+      scoreText.innerHTML="Score is " + current;
+      if (current == end) {
+          clearInterval(timer);
+      }
+  }, stepTime);
+}
