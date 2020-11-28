@@ -21,3 +21,11 @@ First of all, here is what you need to know about the Tetris game.The main piece
 <p align="center">
    <img src="blocksOfTetris.png" width="50%" width=50%" title="Tetrominoes">
 </p>
+<br/>
+
+**Square** - We can consider that squares are atoms of objects of our game world. The board and the Tetrominoes are both made of squares that are regular quadrilateral. All of the four sides and four angles of a square are equal. The side size of a square will be assigned according to the width and height of the game board.
+<br/>
+
+**Walls** - there are two walls, the right and the left wall.
+                                                                           
+                                                                           
