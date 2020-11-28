@@ -39,6 +39,12 @@ Let's take  the **S piece** as an example. The picture below represents how the 
    <img src="s_tetromino.png" width="30%" title="S Tetromino">
 </p>
 
+If we think of this piece as a **2-dimensional array**, we can think of each square of this piece as a **1** or a **0**. The idea is, for a **VACANT**(empty) square we give **0**, and for an **occupied(colored)** square we give **1**.Now, the above picture is just one pattern out of four, the 2-dimensional array for this pattern should be like below.
+
+          [ [ 1, 1, 0],
+            [ 0, 1, 1],
+            [ 0, 0, 0 ] ],
+
 
 
 
