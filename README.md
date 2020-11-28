@@ -11,12 +11,11 @@ If you want to play the game before dive deep into the source code, you can clic
 <br/>
 
 <h2 align="center">Basic information about the game</h2>
-<br>
 
 First of all, there are some basic information we need to know about the Tetris game.The main pieces of the game concept are **The game board, Tetrominoes, Walls, Square.**
 <br/>
 
-**The game board** - The game is played on a board that will be implemented to HTML Canvas element, that has 17 rows and 10 columns. We can consider that a 2d array.
+**The game board** - The game is played on a board that will be implemented to [HTML Canvas](https://www.w3schools.com/html/html5_canvas.asp) element, that has 17 rows and 10 columns. We can consider that a 2d array.
 <br/>
 
 **Tetrominoes** are the main figures in the game. There are 7 different pieces in the shape of  Z, T, L, O, I, J, and S letters. These tetrominoes are able to move to the right, to the left, and rotate. Also, Tetrominoes always have to fall down until they reach the bottom. When the Tetromino hits the bottom, we lock it on the board. Then the game should generate a new one randomly.
@@ -30,5 +29,9 @@ First of all, there are some basic information we need to know about the Tetris 
 <br/>
 
 **Walls** - there are two walls, the right and the left wall.
+<br/>
+
+
+<h2 align="center">How to create a Tetromino?</h2>
                                                                            
                                                                            
