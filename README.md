@@ -33,5 +33,15 @@ First of all, there are some basic information we need to know about the Tetris 
 
 
 <h2 align="center">How to create a Tetromino?</h2>
+
+<p align="center">
+   <img src="s_tetromino.png" title="S Tetromino">
+</p>
+
+
+
+
+
+
                                                                            
                                                                            
