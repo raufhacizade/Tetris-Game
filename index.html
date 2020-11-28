@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
 
@@ -34,12 +35,27 @@
 
     <div class="main" id="main" style="display: none;">
 
-      <!-- <canvas id="game-board" width="500" height="850" ></canvas> -->
       <canvas id="game-board" width="290" height="580" ></canvas>
 
-      <div class="score-table">
-        <h1></h1>
+      <footer id="footer">
+        <a class="control-btn" onclick="controlByBtn(1)">
+          <i class="fa fa-long-arrow-left"></i>
+        </a>
+        <a class="control-btn" onclick="controlByBtn(2)">
+          <i class="fa fa-repeat"></i>
+        </a>
+        <a class="control-btn" onclick="controlByBtn(3)">
+          <i class="fa fa-arrow-down"></i>
+        </a>
+        <a class="control-btn" onclick="controlByBtn(4)">
+          <i class="fa fa-long-arrow-right"></i>
+        </a>
+      </footer>
+
+      <div class="score-table" id="score-table">
+        <h3></h3>
       </div>
+
     </div>
     <script src="app.js"></script>
   </body>

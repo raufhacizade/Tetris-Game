@@ -1,9 +1,10 @@
 const canvas=document.querySelector("#game-board");
 const ctx =canvas.getContext("2d");
-const scoreText=document.querySelector(".score-table h1");
+const scoreText=document.querySelector(".score-table h3");
 
 const row=20;
 const column=10;
+let w = document.body.clientWidth;
 const sqSize=29; 
 
 let score = 0;
@@ -343,6 +344,18 @@ function CONTROL(event){
   }
 }//end Of CONTROL
 
+function controlByBtn(btnCode){
+  if (btnCode == 1) {
+    piece.moveLeft();
+  }else if (btnCode == 2) {
+    piece.rotate();
+  }else if (btnCode == 3) {
+    piece.moveDown();
+  }else if (btnCode == 4) {
+    piece.moveRight();
+  }
+}//end Of CONTROL
+
 function randomPiece(){
   let randomN=Math.floor(Math.random()*PIECES.length);
   return new Piece(PIECES[randomN][0],PIECES[randomN][1]);
@@ -364,6 +377,7 @@ function drop(){
 
 drawBoard();
 piece=randomPiece();
+
 function start(){
   document.getElementById("startBTN").style.display = "none";
   document.getElementById("main").style.display = "block";
@@ -389,7 +403,6 @@ function reStart(){
 }
 
 function animateValue(start, end, duration) {
-  console.log("here");
   if (start === end) return;
   var range = end - start;
   var current = start;
