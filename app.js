@@ -2,9 +2,9 @@ const canvas=document.querySelector("#game-board");
 const ctx =canvas.getContext("2d");
 const scoreText=document.querySelector(".score-table h1");
 
-const row=17;
+const row=20;
 const column=10;
-const sq=canvas.width*column/100;
+const sqSize=29; 
 
 let score = 0;
 let gameOver=false;
@@ -145,13 +145,21 @@ const Z=[
 ];
 
 const PIECES=[
-        [I,"blue"],
-        [J,"orange"],
-        [L,"purple"],
+        // [I,"blue"],
+        // [J,"orange"],
+        // [L,"purple"],
+        // [O,"indigo"],
+        // [S,"green"],
+        // [T,"cyan"],
+        // [Z,"red"]
+
+        [I, "#2020FF"],
+        [J,"#FF8040"],
+        [L,"#9F009F"],
         [O,"indigo"],
-        [S,"green"],
+        [S,"#00D200"],
         [T,"cyan"],
-        [Z,"red"]
+        [Z,"#FF0000"]
      ];
 
 function fillBoard(){
@@ -169,9 +177,9 @@ fillBoard();
 
 const drawSquare=(x,y,color)=>{
   ctx.fillStyle=color;
-  ctx.fillRect(x*sq,y*sq,sq,sq);
+  ctx.fillRect(x*sqSize,y*sqSize,sqSize,sqSize);
   ctx.strokeStyle="lightgrey";
-  ctx.strokeRect(x*sq,y*sq,sq,sq);
+  ctx.strokeRect(x*sqSize,y*sqSize,sqSize,sqSize);
 }//end of drawSquare
 
 const drawBoard=()=>{
@@ -375,7 +383,6 @@ function reStart(){
   fillBoard();
   drawBoard();
   drop();
-  // scoreText.innerHTML="Score is 0";
   document.getElementById("re-startBTN").style.display = "none";
   document.addEventListener("keydown",CONTROL);
   return false;
@@ -388,7 +395,6 @@ function animateValue(start, end, duration) {
   var current = start;
   var increment = end > start? 1 : -1;
   var stepTime = Math.abs(Math.floor(duration / range));
-  // var obj = document.getElementById(id);
   var timer = setInterval(function() {
       current += increment;
       scoreText.innerHTML="Score is " + current;
