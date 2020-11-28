@@ -34,6 +34,7 @@ First of all, there are some basic information we need to know about the Tetris 
 
 <h2 align="center">How to create a Tetromino?</h2>
 
+Let's take  the **S piece** as an example. The picture below represents how the **S Tetromino** looks in a 3x3 square system.
 <p align="center">
    <img src="s_tetromino.png" title="S Tetromino">
 </p>
