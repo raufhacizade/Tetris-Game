@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://www.qries.com/">
-     <img src="Tetris_logo.png" width="50%" width=150" height="70">
+  <a href="https://raufhacizade.github.io/Tetris-Game/" title="Play The Game">
+     <img src="Tetris_logo.png" width="50%" width=50%">
   </a>
 </p>
 
