@@ -10,7 +10,10 @@
 If you want to play the game before dive deep into the source code, you can click [here](https://raufhacizade.github.io/Tetris-Game/) or the picture above. It is also recommended that you know what the Tetris game is and how it is played. You can get detailed info about this from this [link](https://en.wikipedia.org/wiki/Tetris).
 <br/>
 
-First of all, here is what you need to know about the Tetris game.The main pieces of the game concept are **The game board, Tetrominoes, Walls, Square.**
+<h2 align="center">Basic information about the game</h2>
+<br>
+
+First of all, there are some basic information we need to know about the Tetris game.The main pieces of the game concept are **The game board, Tetrominoes, Walls, Square.**
 <br/>
 
 **The game board** - The game is played on a board that will be implemented to HTML Canvas element, that has 17 rows and 10 columns. We can consider that a 2d array.
