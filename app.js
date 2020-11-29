@@ -379,6 +379,8 @@ drawBoard();
 piece=randomPiece();
 
 function start(){
+  reportWindowSize();
+  window.addEventListener('resize', reportWindowSize);
   document.getElementById("startBTN").style.display = "none";
   document.getElementById("main").style.display = "block";
 
@@ -389,6 +391,8 @@ function start(){
 }
 
 function reStart(){
+  reportWindowSize();
+  window.addEventListener('resize', reportWindowSize);
   animateValue(score, 0, 250);
   score = 0;
   gameOver=false;
@@ -415,4 +419,12 @@ function animateValue(start, end, duration) {
           clearInterval(timer);
       }
   }, stepTime);
+}
+
+function reportWindowSize() {
+  if(document.body.offsetWidth<769){
+    document.getElementById("footer").style.display = "block";
+  }else{
+    document.getElementById("footer").style.display = "none";
+  }
 }
