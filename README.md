@@ -52,8 +52,11 @@ If we think of this piece as a **2-dimensional array**, we can think of each squ
 There is a rule that player should be able to rotate a Tetromino, the easiest way to do that with code, is to put 2d array representation of  each model of a Tetromino inside an array.Now, we need to create an array for each Tetromino, and this array should contains of 4 models of the Tetromino. Below picture is the example of S Tetromino.
 
 <p align="center">
-   <img src="all_s_tetrominoes.png" width="70%" title="S Tetromino">
+   <img src="all_s_tetrominoes.png" width="80%" title="S Tetromino">
+   We can do this code implementation for all tetrominoes.
 </p>
+
+
 
 
 
