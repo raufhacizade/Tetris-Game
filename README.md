@@ -42,7 +42,7 @@ Let's take  the **S piece** as an example. The picture below represents how the 
 If we think of this piece as a **2-dimensional array**, we can think of each square of this piece as a **1** or a **0**. The idea is, for a **VACANT**(empty) square we give **0**, and for an **occupied(colored)** square we give **1**.Now, the above picture is just one model out of four, the 2-dimensional array for this model should be like below.
 
 ```javascript
-///S Tetromino representation as a 2d array
+//S Tetromino representation as a 2d array
 [ [ 1, 1, 0],
   [ 0, 1, 1],
   [ 0, 0, 0 ] ]
@@ -75,6 +75,12 @@ function fillBoard(){
     }
   }//end of board
 }
+```
+Now we know that Game Board and Tetrominoes are made of squares and we will use a constant variable in name of **sqSize** that represents size of square.Value of this variable (sqSize) is 29. So, **this 29/29 px square is our unit.**
+<br/>
+For **drawing a Square to the Canvas**, we need to create the canvas element inside our index.html file.
+```html
+<canvas id="game-board" width="290" height="580" ></canvas>
 ```
 
 
