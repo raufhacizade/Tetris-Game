@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://raufhacizade.github.io/Tetris-Game/">
-     <img src="Tetris_logo.png" width="50%" title="Play The Game">
+     <img src="Tetris_logo.png" width="40%" title="Play The Game">
   </a>
 </p>
 
@@ -11,7 +11,7 @@ If you want to play the game before dive deep into the source code, you can clic
 
 <p align="center">
   <a href="https://raufhacizade.github.io/Tetris-Game/">
-     <img src="forReadMe/demo.gif" width="50%" title="Play The Game">
+     <img src="forReadMe/demo.gif" width="70%" title="Play The Game">
   </a>
 </p>
 
