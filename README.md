@@ -21,7 +21,7 @@ First of all, there are some basic information we need to know about the Tetris 
 **Tetrominoes** are the main figures in the game. There are 7 different pieces in the shape of  Z, T, L, O, I, J, and S letters. These tetrominoes are able to move to the right, to the left, and rotate. Also, Tetrominoes always have to fall down until they reach the bottom. When the Tetromino hits the bottom, we lock it on the board. Then the game should generate a new one randomly.
 
 <p align="center">
-   <img src="blocksOfTetris.png" width="50%" width=50%" title="Tetrominoes">
+   <img src="forReadMe/blocksOfTetris.png" width="50%" width=50%" title="Tetrominoes">
 </p>
 <br/>
 
