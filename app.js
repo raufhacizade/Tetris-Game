@@ -4,8 +4,10 @@ const scoreText=document.querySelector(".score-table h3");
 
 const row=20;
 const column=10;
-let w = document.body.clientWidth;
 const sqSize=29; 
+const VACANT="white";
+let  board;
+let w = document.body.clientWidth;
 
 let score = 0;
 let gameOver=false;
@@ -164,6 +166,7 @@ const PIECES=[
      ];
 
 function fillBoard(){
+  board=[];
   for (var r = 0; r < row; r++) {
     board[r]=[];
     for (var c = 0; c < column; c++) {
@@ -171,10 +174,6 @@ function fillBoard(){
     }
   }//end of board
 }
-
-const VACANT="white";
-let   board=[];
-fillBoard();
 
 const drawSquare=(x,y,color)=>{
   ctx.fillStyle=color;
@@ -375,15 +374,16 @@ function drop(){
 }//end of drop
 
 
-drawBoard();
-piece=randomPiece();
-
 function start(){
   reportWindowSize();
   window.addEventListener('resize', reportWindowSize);
   document.getElementById("startBTN").style.display = "none";
   document.getElementById("main").style.display = "block";
 
+  
+  fillBoard();
+  drawBoard();
+  piece=randomPiece();
   drop();
   scoreText.innerHTML="Score is 0";
   document.addEventListener("keydown",CONTROL);
@@ -397,9 +397,9 @@ function reStart(){
   score = 0;
   gameOver=false;
   dropStart=Date.now();
-  board=[];
   fillBoard();
   drawBoard();
+  piece=randomPiece();
   drop();
   document.getElementById("re-startBTN").style.display = "none";
   document.addEventListener("keydown",CONTROL);
