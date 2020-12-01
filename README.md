@@ -11,7 +11,7 @@ If you want to play the game before dive deep into the source code, you can clic
 
 <p align="center">
   <a href="https://raufhacizade.github.io/Tetris-Game/">
-     <img src="forReadMe/demo.gif" width="80%" title="Play The Game">
+     <img src="forReadMe/demo.gif" width="90%" title="Play The Game">
   </a>
 </p>
 
