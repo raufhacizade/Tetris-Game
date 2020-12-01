@@ -78,14 +78,35 @@ function fillBoard(){
 ```
 Now we know that Game Board and Tetrominoes are made of squares and we will use a constant variable in name of **sqSize** that represents size of square.Value of this variable (sqSize) is 29. So, **this 29/29 px square is our unit.**
 <br/>
-For **drawing a Square to the Canvas**, we need to create the canvas element inside our index.html file.
+For **drawing a Square to the Canvas**, we need to create the canvas element inside our [index.html](https://github.com/raufhacizade/Tetris-Game/blob/master/index.html) file. Also we need an html tag showing the score earned.For that we will use h3 tag.
 ```html
 <canvas id="game-board" width="290" height="580" ></canvas>
+<div class="score-table" id="score-table">
+     <h3></h3>
+</div>
 ```
+The HTML Canvas Element has a method in the name of  getContext().This method returns a drawing context that allow us to draw and do different things on the canvas. Now, we will select our canvas and **usegetContext('2d')** method of our canvas in [app.js](https://github.com/raufhacizade/Tetris-Game/blob/master/app.js) file. Also we will select h3 tag to show score dynamically.
+```javascript
+const canvas=document.querySelector("#game-board");
+const ctx =canvas.getContext("2d");
+const scoreText=document.querySelector(".score-table h3");
+```
+Time to talk about how to draw a square. A square is a rectangle and we will use **ctx.fillRect(X,Y,WIDTH,HEIGHT)** method to draw a rectangle. As you can see from paremeters of the methods, first 2 paremetrs indicate position of top left corner of the rectangle and last 2 paremetrs indicate width and height of the rectangle.And we already know that width and height of our rectangles will be same.
 
+Before calling fillRect() method, we need to give a color to our rectangle. For example ctx.fillStyle = "green".
 
+Also it is easy to add a stroke for that square. First we need to give it a color (**ctx.strokeStyle="lightgrey"**) and then to call **ctx.strokeRect(X,Y,WIDTH,HEIGHT)** method.
 
+Now we need to make this bunch of codes reusable.We just will put it inside a function in the name of **drawSquare**. This function will accept the X , Y position and the color of  the square.
 
+```javascript
+const drawSquare=(x,y,color)=>{
+  ctx.fillStyle=color;
+  ctx.fillRect(x*sqSize,y*sqSize,sqSize,sqSize);
+  ctx.strokeStyle="lightgrey";
+  ctx.strokeRect(x*sqSize,y*sqSize,sqSize,sqSize);
+}//end of drawSquare
+```
 
 
                                                                            
