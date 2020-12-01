@@ -7,7 +7,14 @@
 <h2 align="center"> This game was created as a responsive web project. The main logic of the game is created by using pure JavaScript and HTML, CSS.</h2>
 <br/>
 
-If you want to play the game before dive deep into the source code, you can click [here](https://raufhacizade.github.io/Tetris-Game/) or the picture above. It is also recommended that you know what the Tetris game is and how it is played. You can get detailed info about this from this [link](https://en.wikipedia.org/wiki/Tetris).
+If you want to play the game before dive deep into the source code, you can click [here](https://raufhacizade.github.io/Tetris-Game/). It is also recommended that you know what the Tetris game is and how it is played. You can get detailed info about this from this [link](https://en.wikipedia.org/wiki/Tetris).
+
+<p align="center">
+  <a href="https://raufhacizade.github.io/Tetris-Game/">
+     <img src="forReadMe/demo.gif" width="50%" title="Play The Game">
+  </a>
+</p>
+
 <br/>
 
 <h2 align="center">Basic information about the game</h2>
@@ -36,7 +43,7 @@ First of all, there are some basic information we need to know about the Tetris 
 
 Let's take  the **S piece** as an example. The picture below represents how the **S Tetromino** looks in a 3x3 square system.
 <p align="center">
-   <img src="s_tetromino.png" width="30%" title="S Tetromino">
+   <img src="forReadMe/s_tetromino.png" width="30%" title="S Tetromino">
 </p>
 
 If we think of this piece as a **2-dimensional array**, we can think of each square of this piece as a **1** or a **0**. The idea is, for a **VACANT**(empty) square we give **0**, and for an **occupied(colored)** square we give **1**.Now, the above picture is just one model out of four, the 2-dimensional array for this model should be like below.
@@ -52,7 +59,7 @@ If we think of this piece as a **2-dimensional array**, we can think of each squ
 There is a rule that player should be able to rotate a Tetromino, the easiest way to do that with code, is to put 2d array representation of  each model of a Tetromino inside an array.Now, we need to create an array for each Tetromino, and this array should contains of 4 models of the Tetromino. Below picture is the example of S Tetromino.
 
 <p align="center">
-   <img src="all_s_tetrominoes.png" width="80%" title="S Tetromino">
+   <img src="forReadMe/all_s_tetrominoes.png" width="80%" title="S Tetromino">
 </p>
 <br/>
 
