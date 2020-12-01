@@ -41,7 +41,7 @@ Let's take  the **S piece** as an example. The picture below represents how the 
 
 If we think of this piece as a **2-dimensional array**, we can think of each square of this piece as a **1** or a **0**. The idea is, for a **VACANT**(empty) square we give **0**, and for an **occupied(colored)** square we give **1**.Now, the above picture is just one model out of four, the 2-dimensional array for this model should be like below.
 
-```javascipt
+```javascript
 ///S Tetromino representation as a 2d array
 [ [ 1, 1, 0],
   [ 0, 1, 1],
@@ -61,7 +61,7 @@ There is a rule that player should be able to rotate a Tetromino, the easiest wa
 
 Above we said that we will look **Game Board** as an 2d array.We need 2 for loops if we want to loop through our 2d array. We will create the **rows** with the first loop, and the **columns** with second one.
 
-```javascipt
+```javascript
 const row=20;
 const column=10;
 let  board;
