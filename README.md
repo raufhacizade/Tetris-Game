@@ -25,7 +25,7 @@ First of all, there are some basic information we need to know about the Tetris 
 </p>
 <br/>
 
-**Square** - We can consider that squares are atoms of objects of our game world. The board and the Tetrominoes are both made of squares that are regular quadrilateral. All of the four sides and four angles of a square are equal. The side size of a square will be assigned according to the width and height of the game board.
+**Square** - We can consider that squares are atoms of objects of our game world. The board and the Tetrominoes are both made of squares that are regular quadrilateral. All of the four sides and four angles of a square are equal. The side size of a square will be constant.
 <br/>
 
 **Walls** - there are two walls, the right and the left wall.
@@ -53,8 +53,28 @@ There is a rule that player should be able to rotate a Tetromino, the easiest wa
 
 <p align="center">
    <img src="all_s_tetrominoes.png" width="80%" title="S Tetromino">
-   We can do this code implementation for all tetrominoes.
 </p>
+<br/>
+
+
+<h2 align="center">How to create the Game Board?</h2>
+
+Above we said that we will look **Game Board** as an 2d array.We need 2 for loops if we want to loop through our 2d array. We will create the **rows** with the first loop, and the **columns** with second one.
+
+```const row=20;
+const column=10;
+let  board;
+
+function fillBoard(){
+  board=[];
+  for (var r = 0; r < row; r++) {
+    board[r]=[];
+    for (var c = 0; c < column; c++) {
+      board[r][c]=VACANT;
+    }
+  }//end of board
+}
+```
 
 
 
